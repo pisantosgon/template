@@ -9,37 +9,54 @@ import ErroPage from './pages/ErroPage';
 import App from './pages/App';
 import CadastroProduto from './pages/CadastroProduto';
 import "./App.css";
+import { CssBaseline } from '@mui/material';
 
 const theme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#c93a67',
+      main: '#9a2ead',
+      light: '#983898',
+      dark: '#060606',
+      contrastText: '#f9f9f9',
     },
     secondary: {
-      main: '#b54f8e',
+      main: '#6f098a',
+      light: '#823498',
+      dark: '#8c1faa',
     },
     success: {
-      main: '#18d222',
+      main: '#b18cf3',
       contrastText: '#000000',
+      light: '#370c81',
+      dark: '#b18cf3',
     },
     info: {
-      main: '#61b6de',
-      light: '#06547d',
+      main: '#4a148c',
+      light: '#4a148c',
       contrastText: 'rgba(0,0,0,0.87)',
+      dark: '#4a148c',
     },
     warning: {
-      main: '#d0a05a',
+      main: '#8c1c8c',
       contrastText: 'rgba(0,0,0,0.87)',
+      light: '#8c1c8c',
+      dark: '#8c1c8c',
     },
     error: {
-      main: '#e42020',
-      dark: '#af2100',
+      main: '#35205c',
+      dark: '#35205c',
       contrastText: '#000000',
+      light: '#35205c',
     },
     text: {
       primary: '#000000',
-      secondary: 'rgba(206,36,115,0.6)',
+      secondary: '#000000',
+      disabled: '#8623bf',
+    },
+    background: {
+      default: '#ce93d8',
+      paper: '#ffffff',
     },
   }
 });
@@ -78,6 +95,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ThemeProvider theme={theme}>
+    <CssBaseline></CssBaseline>
     <RouterProvider router={router} />
   </ThemeProvider>
 );
